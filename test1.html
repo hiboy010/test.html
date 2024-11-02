@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crumbs Design</title>
+    <style>
+        /* Main container style */
+        body {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .section {
+            width: 50vw;
+            height: 50vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        /* Background colors */
+        .pink-background {
+            background-color: #ffb6c1;
+            color: #002d80;
+        }
+
+        .blue-background {
+            background-color: #002d80;
+            color: #ffb6c1;
+        }
+
+        .white-background {
+            background-color: #ffffff;
+            color: #002d80;
+        }
+
+        /* Text styling */
+        .logo-text {
+            font-size: 3em;
+            font-weight: bold;
+            text-align: center;
+            display: flex;
+            align-items: center;
+        }
+
+        .crumbs-logo {
+            position: relative;
+        }
+
+        .crumbs-logo::before {
+            content: '';
+            width: 10px;
+            height: 10px;
+            background-color: #ff7f50;
+            border-radius: 50%;
+            position: absolute;
+            top: 0;
+            left: -20px;
+        }
+
+        .crumbs-logo::after {
+            content: '';
+            width: 10px;
+            height: 10px;
+            background-color: #ff7f50;
+            border-radius: 50%;
+            position: absolute;
+            top: 20px;
+            left: 10px;
+        }
+
+        .slogan {
+            font-size: 1em;
+            font-style: italic;
+            color: #ff7f50;
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        /* Cookie image styling */
+        .cookie {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            background-size: cover;
+        }
+
+        .cookie-top {
+            top: -20px;
+            right: -20px;
+        }
+
+        .cookie-bottom {
+            bottom: -20px;
+            left: -20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Top left section -->
+    <div class="section pink-background">
+        <div class="crumbs-logo">
+            <div class="logo-text">crumbs</div>
+            <div class="slogan">American cookies à Tunis</div>
+        </div>
+        <div class="cookie cookie-top" style="background-image: url('cookie-top.png');"></div>
+    </div>
+
+    <!-- Top right section -->
+    <div class="section white-background">
+        <div class="crumbs-logo">
+            <div class="logo-text">crumbs</div>
+            <div class="slogan">American cookies à Tunis</div>
+        </div>
+        <div class="cookie cookie-top" style="background-image: url('cookie-top.png');"></div>
+    </div>
+
+    <!-- Bottom section -->
+    <div class="section blue-background">
+        <div class="crumbs-logo">
+            <div class="logo-text">crumbs</div>
+            <div class="slogan">American cookies à Tunis</div>
+        </div>
+        <div class="cookie cookie-bottom" style="background-image: url('cookie-bottom.png');"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suprême Design</title>
+    <style>
+        /* Basic body styling */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #ffffff;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Container for the centered logo */
+        .logo-container {
+            position: relative;
+            text-align: center;
+            z-index: 10;
+        }
+
+        /* Large red "Suprême" text in the center */
+        .logo-text {
+            font-family: 'Brush Script MT', cursive; /* Fallback for cursive style */
+            font-size: 5em;
+            color: #d32f2f;
+            font-weight: bold;
+            position: relative;
+            display: inline-block;
+        }
+
+        /* Red underline under "Suprême" */
+        .logo-text::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 10%;
+            width: 80%;
+            height: 5px;
+            background-color: #d32f2f;
+            transform: skew(-15deg);
+        }
+
+        /* Faint repeated background text */
+        .background-text {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            color: rgba(0, 0, 0, 0.05);
+            font-size: 3em;
+            font-family: 'Brush Script MT', cursive;
+            overflow: hidden;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        /* Random placement and rotation of repeated background text */
+        .background-text span {
+            position: absolute;
+            opacity: 0.05;
+            color: #000000;
+            font-size: 4em;
+            transform: rotate(calc(10deg * var(--rotation)));
+        }
+
+        /* Position of each repeated "Suprême" in the background */
+        .background-text .text1 { top: 10%; left: 20%; --rotation: 1; }
+        .background-text .text2 { top: 40%; left: 5%; --rotation: -1; }
+        .background-text .text3 { top: 70%; left: 30%; --rotation: 2; }
+        .background-text .text4 { top: 20%; left: 60%; --rotation: -2; }
+        .background-text .text5 { top: 60%; left: 80%; --rotation: 1; }
+        .background-text .text6 { top: 80%; left: 10%; --rotation: -1; }
+        .background-text .text7 { top: 50%; left: 50%; --rotation: 1.5; }
+    </style>
+</head>
+<body>
+    <!-- Faint repeated "Suprême" background text -->
+    <div class="background-text">
+        <span class="text1">Suprême</span>
+        <span class="text2">Suprême</span>
+        <span class="text3">Suprême</span>
+        <span class="text4">Suprême</span>
+        <span class="text5">Suprême</span>
+        <span class="text6">Suprême</span>
+        <span class="text7">Suprême</span>
+    </div>
+
+    <!-- Foreground main logo text -->
+    <div class="logo-container">
+        <span class="logo-text">Suprême</span>
+    </div>
+</body>
+</html>
